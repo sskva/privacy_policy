@@ -1,0 +1,18 @@
+2019-06-03 12:39:07.317 ERROR 2116 --- [TaskScheduler-1] o.s.cloud.consul.config.ConfigWatch      : Fail fast is set and there was an error reading configuration from consul.
+2019-06-03 12:39:07.325 ERROR 2116 --- [TaskScheduler-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task.
+
+com.ecwid.consul.v1.OperationException: OperationException(statusCode=504, statusMessage='Gateway Time-out', statusContent='<html><body><h1>504 Gateway Time-out</h1>
+The server didn't respond in time.
+</body></html>
+')
+	at com.ecwid.consul.v1.kv.KeyValueConsulClient.getKVValues(KeyValueConsulClient.java:159) ~[consul-api-1.4.1.jar:na]
+	at com.ecwid.consul.v1.ConsulClient.getKVValues(ConsulClient.java:534) ~[consul-api-1.4.1.jar:na]
+	at org.springframework.cloud.consul.config.ConfigWatch.watchConfigKeyValues(ConfigWatch.java:154) ~[spring-cloud-consul-config-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_181]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) [na:1.8.0_181]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_181]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) [na:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_181]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_181]
