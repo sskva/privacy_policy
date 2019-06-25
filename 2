@@ -1,0 +1,39 @@
+Всем привет, пытаюсь зарегать себя как самозанятого, получаю ошибку. Что не так может быть?
+
+https://himself-ktr-api.nalog.ru:8090/ais3/smz/SmzIntegrationService
+
+Content-Type:application/xml;charset=utf-8
+SOAPAction:"urn:SendMessageRequest"
+FNS-OpenApi-Token:fad2f0bae77f47c7b95d249a0ea870d8
+FNS-OpenApi-UserToken:QVBQX1VTRVJfSURfMQ==
+
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+   <S:Body>
+      <SendMessageRequest xmlns="urn://x-artefacts-gnivc-ru/inplat/servin/OpenApiAsyncMessageConsumerService/types/1.0">
+         <Message>
+            <PostRegistrationRequest xmlns="urn://x-artefacts-gnivc-ru/ais3/SMZ/SmzPartnersIntegrationService/types/1.0">
+               <Inn>692700121463</Inn>
+               <FirstName>Сергей</FirstName>
+               <SecondName>Козлов</SecondName>
+               <Birthday>1983-02-11</Birthday>
+               <Phone>79166622842</Phone>
+               <RequestTime>2019-06-25T09:30:47Z</RequestTime>
+               <Oktmo>45000000</Oktmo>
+            </PostRegistrationRequest>
+         </Message>
+      </SendMessageRequest>
+   </S:Body>
+</S:Envelope>
+
+
+
+ответ:
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <soap:Fault>
+            <faultcode>soap:Server</faultcode>
+            <faultstring>Произошла внутренняя ошибка 54017754-1dcd-4a38-959e-3fd7612f24c3. При повторении ошибки обратитесь в службу технической поддержки.</faultstring>
+        </soap:Fault>
+    </soap:Body>
+</soap:Envelope>
